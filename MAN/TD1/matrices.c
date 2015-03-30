@@ -7,7 +7,7 @@ matrice* constructMatrice(int s_x, int s_y, double def){
   cur->values = (double**) malloc(s_x*sizeof(double*));
 
   for(x=0 ; x<s_x ; x++){
-    cur->values[x] = (double*) malloc(sizeof(double));
+    cur->values[x] = (double*) malloc(s_y*sizeof(double));
     for(y=0; y<s_y; y++){
       cur->values[x][y] = def;
     }
