@@ -48,7 +48,7 @@ void computeTimes(){
     ResolutionCholesky(AA,b);
     t = clock() - t;
     time_taken = ((double)t)/CLOCKS_PER_SEC;
-    printf("Temps de resolution A (Cholesky) : %f\n",time_taken);
+    printf("Temps de resolution A*A (Cholesky) : %f\n",time_taken);
 
     t = clock();
     temp = ResolutionCholesky(A,b);
@@ -67,7 +67,7 @@ void computeTimes(){
 int main(){
 
   // ******************************************************** PARTIE 1 A ***************************
-  /*printf("**************** 32 ***************\n");
+  printf("**************** 32 ***************\n");
   matrice *A = loadFromFile("Matrices/32.mat");
 
   printf("** A **\n");
@@ -94,11 +94,6 @@ int main(){
   freeMatrice(B);
 
   printf("**************** 4 *****************\n");
-  A = generateMatrice(3);
-  printMatrice(A);
-
-  B = multiply(A,A);
-  printMatrice(B);*/
 
   computeTimes();
 
