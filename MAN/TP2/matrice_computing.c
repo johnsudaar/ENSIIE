@@ -189,7 +189,7 @@ matrice* Cholesky(matrice* B){
       res = getMath(j,j,A) - pow(getMath(j,k,A),2);
       setMath(j,j,res,A);
     }
-    //setMath(j,j,sqrt(getMath(j,j,A)),A);
+    setMath(j,j,sqrt(getMath(j,j,A)),A);
     for(i=j+1; i<=n; i++){
       for(k = 1; k<= j - 1; k++){
         res = getMath(i,j,A) - getMath(i,k,A)*getMath(j,k,A);
